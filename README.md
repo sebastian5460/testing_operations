@@ -7,7 +7,7 @@ Alejandro Rojas - 1845239,
 Hanner Chiran- 2274669
 
 Ingresar a la carpeta demo/src/main... donde se encontrarán las funciones para las operaciones aritméticas.
-En la ruta dome/test se encontrarán las pruebas unitarias para las respectivas funciones
+En la ruta demo/test se encontrarán las pruebas unitarias para las respectivas funciones
 
 ### Jacoco report
 
