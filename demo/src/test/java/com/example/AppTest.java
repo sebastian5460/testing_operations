@@ -1,5 +1,6 @@
 package com.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -30,15 +31,6 @@ public class AppTest
     }
 
     @Test
-    public void isNullDivision2(){
-
-        assertThrows(NullPointerException.class, ()->{
-            Functions operation = new Functions();
-            operation.division(3.0, 3.4);
-        });
-    }
-
-    @Test
     public void isNullMultiply(){
 
         assertThrows(NullPointerException.class, ()->{
@@ -63,6 +55,38 @@ public class AppTest
             Functions operation = new Functions();
             operation.substraction(4.0, null);
         });
+    }
+
+    @Test
+    public void multiplyTesting(){
+        Functions operation = new Functions();
+
+        double twenty1 = operation.multiply(5.0,4.0);
+        double twenty2 = operation.multiply(10.0, 2.0);
+
+        assertEquals(twenty1, twenty2);
+    }
+
+    @Test
+    public void isMinor(){
+        Functions operation = new Functions();
+
+        double a = 15.0;
+        double b = 3.4;
+        double c = operation.substraction(a, b);
+
+        assertTrue(c < a);
+    }
+
+    @Test
+    public void isMajor(){
+        Functions operation = new Functions();
+
+        double a = 15.0;
+        double b = 5;
+        double c = operation.add(a, b);
+
+        assertTrue(c > a);
     }
 
 
